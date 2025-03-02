@@ -1,2 +1,11 @@
-/data/*
-/local_code/*
+
+/code
+/config
+/data
+/.git
+/.ipynb_checkpoints
+/local_code
+/mediaarts_db
+*.ipynb
+*.json
+*.csv
