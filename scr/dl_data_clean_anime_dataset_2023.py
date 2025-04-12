@@ -30,9 +30,15 @@ def main():
         save_file_path = usrconfg['anime-dataset-2023']['save_file_path']
 
         Data_Clenaer = Data_cleaner(load_file_path)
-        df = Data_Clenaer.load_data()
+        df = Data_Clenaer.load_data('csv','UTF8')
         df = Data_Clenaer.clean_data(df)
-        Data_Clenaer .save_data(df,save_file_path)
+
+        # ファイルパスの変換。
+        save_file_path,ext = os.path.splitext(save_file_path)
+        ext = 'pkl'
+        save_file_path = save_file_path +'.' +ext
+
+        Data_Clenaer .save_data(df,save_file_path,ext,'UTF8')
 
     print("done data cleaning")
 
