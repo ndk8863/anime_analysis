@@ -55,11 +55,11 @@ class Parent_data_cleaner():
                 df.to_csv(save_file_path,index=False,encoding=encording)
                 print(f"データを保存しました: {save_file_path}")
             elif ext == 'pkl':
-                df.to_pickle(save_file_path,index=False,encoding=encording)
+                df.to_pickle(save_file_path)
                 print(f"データを保存しました: {save_file_path}")
             # parquet型も作成する
             elif ext == 'json':
-                df.to_json(save_file_path,index=False,encoding=encording)
+                df.to_json(save_file_path)
                 print(f"データを保存しました: {save_file_path}")
             elif ext == 'xlsx':
                 df.to_excel(save_file_path,index=False,encoding=encording)
